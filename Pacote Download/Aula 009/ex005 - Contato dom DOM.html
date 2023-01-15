@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {background-color: rgb(83, 83, 168);
+        color: brown;
+        font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos com Dom!</h1>
+    <p>Aqui vai o Resuldado</p>
+    <p>Aprendendo a usar <strong>Dom</strong> em JavaScript</p>
+    <div id ="msg">Clique em mim</div> <!-- dps do div tenho que selecionar os elementos entre (TagName,ID,Name,ClasseName e querySeletor) -->
+    <script>
+        var corpo = window.document.body // selecionando o fundo da pagina
+        var p1 = window.document.getElementsByTagName('p')[1] // [0] pegar o primeiro paragrafo 'p' [1] pegar o segundo
+        window.document.write('Está escrito assim: ' + p1.innerText) // pequei o conteudo do paragrafo na linha 17
+        p1.style.color = 'blue' // mudar a cor da fonte
+        corpo.style.background = 'black' // mudando o fundo da página com a variavel da variavel corpo
+        //document.write(p1.innerText) pega o texto sem formatação (com o Dom sem Negrito)
+        //document.write(p1.innerHTML) pega o texto com formtação (com o Dom em Negrito)
+        /*var d = window.document.getElementById('msg') - selecionado pela classe Id
+        d.style.background = 'green'
+        //d.innerText = 'Estou aguardando...' codigo simplificado 
+        window.document.getElementById('msg').innerText = 'Olá!'//codigo completo */
+        /*var d = window.document.getElementsByName('msg') [0] - selecionado pela clase Nome (Name)
+        d.innerText = 'Olá!'*/
+        var d = window.document.querySelector('div#msg')//'#' para id e '.' para classe
+        d.style.color = 'blue'
+
+
+
+    </script>
+</body>
+</html>
